@@ -37,6 +37,8 @@ h1 { font: 600 28px/1.1 var(--serif); margin: 0 0 6px; text-wrap: balance; lette
 .filters { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 14px }
 .chip { padding: 5px 10px; display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; background: var(--panel); border: 1px solid var(--rule); border-radius: 4px; cursor: pointer }
 .chip[aria-pressed="false"] { opacity: .5 }
+.export { display: flex; align-items: center; gap: 10px; margin-top: 12px; font-size: 13px; color: var(--muted) }
+.btn.small { padding: 6px 12px; font-size: 13px }
 
 .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; flex: none }
 .dot.open { background: var(--open) } .dot.limited { background: var(--limited) }

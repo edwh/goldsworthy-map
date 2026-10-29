@@ -9,6 +9,10 @@ Tap a place for photos, directions and a button to mark it visited. The visited 
 kept in your browser's local storage, so it stays on the device you used and is never
 sent anywhere. Each place has a link of the form `#tilberthwaite-touchstone-fold`.
 
+**Download GPX** saves the places currently shown as named waypoints, with the place,
+notes, grid reference and a link back to the map. The filters apply, so hiding visited
+places gives a file of the ones still to see.
+
 ## Data
 
 `data/sites.json` holds every place. Positions come from three sources, in this order of

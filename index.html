@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Goldsworthy in Britain</title>
+<meta name="description" content="A map of Andy Goldsworthy's permanent works in Britain, with a record of the ones you have visited.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side" id="side">
+    <header>
+      <h1>Andy Goldsworthy in Britain</h1>
+      <p class="lede">Permanent works you can still find, from the Cumbrian sheepfolds to the Striding Arches. Tap a place to see photos and mark it visited.</p>
+      <div class="progress" id="progress"></div>
+      <div class="filters" id="filters"></div>
+    </header>
+    <div id="list"></div>
+    <footer class="foot">
+      Sheepfold positions come from the OS grid references on the project's own list. Other positions are taken from photo locations or placed by hand, and are marked approximate. Your visited list is kept in this browser only.
+      Photos are from <a href="https://commons.wikimedia.org/wiki/Category:Andy_Goldsworthy">Wikimedia Commons</a>, each credited with its licence. Map data &copy; OpenStreetMap contributors.
+      <a href="https://github.com/edwh/goldsworthy-map">Source and corrections</a>.
+    </footer>
+  </aside>
+  <main class="mapwrap">
+    <div id="map" aria-label="Map of Andy Goldsworthy works"></div>
+    <button class="listtoggle" id="listtoggle" aria-controls="side" aria-expanded="false">List</button>
+  </main>
+</div>
+
+<dialog id="modal" aria-labelledby="m-name">
+  <div class="m-photo" id="m-photo">
+    <img id="m-img" alt="">
+    <button class="nav prev" id="m-prev" aria-label="Previous photo">&#8249;</button>
+    <button class="nav next" id="m-next" aria-label="Next photo">&#8250;</button>
+    <div class="m-count" id="m-count"></div>
+  </div>
+  <p class="credit" id="m-credit"></p>
+  <div class="m-body">
+    <div class="eyebrow" id="m-group"></div>
+    <h2 id="m-name"></h2>
+    <p class="m-place" id="m-place"></p>
+    <p class="m-about" id="m-about"></p>
+    <p class="m-note" id="m-note"></p>
+    <dl class="meta" id="m-meta"></dl>
+    <div class="actions">
+      <button class="btn primary" id="m-visit"></button>
+      <a class="btn" id="m-dir" target="_blank" rel="noopener">Directions</a>
+      <button class="btn" id="m-zoom">Show on map</button>
+      <a class="btn" id="m-more" target="_blank" rel="noopener">More info</a>
+    </div>
+  </div>
+  <button class="close" id="m-close" aria-label="Close">&times;</button>
+</dialog>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="app.js"></script>
+</body>
+</html>

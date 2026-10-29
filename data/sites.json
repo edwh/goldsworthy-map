@@ -144,19 +144,47 @@
   "count": 1,
   "name": "Gravestones",
   "group": "Nithsdale",
-  "year": "unconfirmed",
+  "year": "under construction",
   "ll": [
-   55.36,
-   -3.735
+   55.34,
+   -3.67
   ],
   "place": "Dalveen, Dumfries & Galloway",
   "region": "Dumfries & Galloway",
   "access": "gone",
   "kind": "Unconfirmed",
-  "note": "Listed on Wikipedia with no date. Not confirmed as built or visitable.",
+  "note": "Still being built in 2026, with no opening date or access arrangements published. Position is only the Dalveen Pass.",
   "approx": true,
+  "about": "A walled enclosure, about 25 metres square, filled with stones turned up by grave digging in 108 Dumfries and Galloway cemeteries.",
   "id": "gravestones",
   "photos": []
+ },
+ {
+  "name": "Leaping Arch",
+  "group": "Nithsdale",
+  "year": "2009",
+  "ll": [
+   55.2723,
+   -3.8149
+  ],
+  "place": "Marr Burn, Drumlanrig estate, near Thornhill",
+  "region": "Dumfries & Galloway",
+  "access": "open",
+  "kind": "Sandstone arch",
+  "count": 1,
+  "about": "A red sandstone arch that leaps across the Marr Burn, built from estate stone for the Duke of Buccleuch.",
+  "note": "On the estate walking routes \"A Turn Along the Marr Burn\" and \"Castle View\".",
+  "url": "https://www.drumlanrigcastle.co.uk/outdoor-activities/walking-and-hiking-2/",
+  "id": "leaping-arch",
+  "photos": [
+   {
+    "src": "https://t0.geograph.org.uk/stamped/5091414_bf0784e8.jpg",
+    "page": "https://www.geograph.org.uk/photo/5091414",
+    "license": "CC BY-SA 2.0",
+    "artist": "Billy McCrorie",
+    "title": "The Leaping Arch"
+   }
+  ]
  },
  {
   "count": 1,
@@ -304,6 +332,32 @@
   ]
  },
  {
+  "name": "Stone Gathering",
+  "group": "Northumberland",
+  "year": "",
+  "ll": [
+   55.1428,
+   -2.0721
+  ],
+  "place": "Stelling by Lunga Crags, near Elsdon, Northumberland",
+  "region": "Northumberland",
+  "access": "gone",
+  "kind": "Stone-filled stelling",
+  "count": 1,
+  "about": "A small circular stelling, a stone shelter for sheep, filled with gathered stones.",
+  "note": "Unconfirmed. One photographer names it as Goldsworthy’s Stone Gathering; another says only that it apparently is. Not on any OS map.",
+  "id": "stone-gathering",
+  "photos": [
+   {
+    "src": "https://t0.geograph.org.uk/stamped/596579_41a22d2e.jpg",
+    "page": "https://www.geograph.org.uk/photo/596579",
+    "license": "CC BY-SA 2.0",
+    "artist": "Pete Saunders",
+    "title": "Stelling by Lunga Crags"
+   }
+  ]
+ },
+ {
   "count": 1,
   "name": "Three Sandstone Cones",
   "group": "Nithsdale",
@@ -390,7 +444,7 @@
   "note": "Known locally as “The Lambton Worm”. Grassed over; easy to miss.",
   "url": "https://www.durham.gov.uk/media/3804/i-see-public-artwork-County-Durham/pdf/ISeePublicArtworkCountyDurham.pdf",
   "approx": true,
-  "about": "A long, winding grassed earthwork beside the old railway line, built in 1988 on the site of former colliery workings.",
+  "about": "A long, winding grassed earthwork beside the old railway line, built in 1988.",
   "id": "lambton-earthwork",
   "photos": [
    {
@@ -434,6 +488,32 @@
     "license": "CC BY-SA 2.0",
     "artist": "Trevor Littlewood",
     "title": "The Leadgate Maze - geograph.org.uk - 4803084.jpg"
+   }
+  ]
+ },
+ {
+  "name": "Wigton Pinfold",
+  "group": "Sheepfolds, 1996–2003",
+  "year": "2009",
+  "ll": [
+   54.82,
+   -3.1596
+  ],
+  "place": "Road junction by the petrol station, Wigton",
+  "region": "Cumbria & borders",
+  "access": "open",
+  "kind": "Pinfold",
+  "count": 1,
+  "approx": true,
+  "about": "A red sandstone pinfold, described as the last work of the Sheepfolds project.",
+  "id": "wigton-pinfold",
+  "photos": [
+   {
+    "src": "https://t0.geograph.org.uk/stamped/2480823_08e0a1f2.jpg",
+    "page": "https://www.geograph.org.uk/photo/2480823",
+    "license": "CC BY-SA 2.0",
+    "artist": "Rose and Trev Clough",
+    "title": "Road junction with pinfold"
    }
   ]
  },
@@ -580,7 +660,15 @@
   "src": "sheepfoldscumbria.co.uk (official list)",
   "id": "bolton-pinfold-cone",
   "about": "A village pinfold, the walled pound where stray animals were once held, rebuilt with a tall stone cone at its centre.",
-  "photos": []
+  "photos": [
+   {
+    "src": "https://t0.geograph.org.uk/stamped/4572764_f8342eed.jpg",
+    "page": "https://www.geograph.org.uk/photo/4572764",
+    "license": "CC BY-SA 2.0",
+    "artist": "Oliver Dixon",
+    "title": "Village Pinfold, Bolton"
+   }
+  ]
  },
  {
   "count": 1,
@@ -599,7 +687,15 @@
   "src": "sheepfoldscumbria.co.uk (official list)",
   "id": "deadman-gill-touchstone-fold",
   "about": "A sheepfold rebuilt with a touchstone set into its wall: a panel of stone that invites people passing to touch it.",
-  "photos": []
+  "photos": [
+   {
+    "src": "https://t0.geograph.org.uk/stamped/5954657_a9b3d5ae.jpg",
+    "page": "https://www.geograph.org.uk/photo/5954657",
+    "license": "CC BY-SA 2.0",
+    "artist": "Russel Wills",
+    "title": "View from inside Deadman Gill Touchstone..."
+   }
+  ]
  },
  {
   "count": 1,
@@ -785,6 +881,13 @@
     "license": "CC BY-SA 2.0",
     "artist": "Mike and Kirsty Grundy",
     "title": "Stone Acorn - geograph.org.uk - 712319.jpg"
+   },
+   {
+    "src": "https://t0.geograph.org.uk/stamped/8406056_76439d9e.jpg",
+    "page": "https://www.geograph.org.uk/photo/8406056",
+    "license": "CC BY-SA 2.0",
+    "artist": "Ryk",
+    "title": "Raisbeck Pinfold Cone"
    }
   ]
  },
@@ -952,20 +1055,21 @@
  },
  {
   "count": 1,
-  "name": "Grizedale Forest early works",
+  "name": "Taking a Wall for a Walk",
   "group": "Grizedale Forest",
-  "year": "1984",
+  "year": "1990",
   "ll": [
    54.34,
    -3.021
   ],
   "place": "Grizedale Forest, near Hawkshead",
   "region": "Cumbria & borders",
-  "access": "gone",
-  "kind": "Wood and stone",
-  "note": "His Grizedale works were made to weather away. Taking a Wall for a Walk (1990) was still standing, damaged by felling, when photographed. Ask at the visitor centre.",
+  "access": "open",
+  "kind": "Dry-stone wall",
+  "note": "Some of the trees it weaves around have been felled. Hard to find, so ask at the visitor centre.",
   "approx": true,
-  "id": "grizedale-forest-early-works",
+  "about": "A dry-stone wall that winds between the trees. It is the one Grizedale work by Goldsworthy known to survive; Seven Spires and Sidewinder have gone.",
+  "id": "taking-a-wall-for-a-walk",
   "photos": [
    {
     "src": "https://upload.wikimedia.org/wikipedia/commons/6/64/%22Taking_a_Wall_for_a_Walk%22_-_Grizedale_Forest_-_geograph.org.uk_-_36895.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -1107,6 +1211,13 @@
     "license": "CC BY-SA 2.0",
     "artist": "Paula Healey",
     "title": "Sheepfold - geograph.org.uk - 1130729.jpg"
+   },
+   {
+    "src": "https://t0.geograph.org.uk/stamped/2909535_51d05cce.jpg",
+    "page": "https://www.geograph.org.uk/photo/2909535",
+    "license": "CC BY-SA 2.0",
+    "artist": "Karl and Ali",
+    "title": "An Andy Goldsworthy sheepfold and..."
    }
   ]
  },
@@ -1185,6 +1296,41 @@
   "id": "snowball-fold",
   "about": "One of the old Cumbrian sheepfolds rebuilt by Goldsworthy and local wallers, often holding a boulder, a cairn or another stone feature.",
   "photos": []
+ },
+ {
+  "name": "Clougha Pike Chambers",
+  "group": "Forest of Bowland",
+  "year": "1999–2001",
+  "grid": "SD 5555 5951",
+  "ll": [
+   54.0297,
+   -2.68
+  ],
+  "place": "Old quarry below Grit Fell, Clougha, near Quernmore, Lancashire",
+  "region": "Lancashire",
+  "access": "open",
+  "kind": "Three stone chambers",
+  "count": 3,
+  "about": "Three stone chambers built from leftover quarry stone, one a year from 1999. Each has an oval opening and is big enough to step inside.",
+  "note": "On the Abbeystead estate, reached on foot from the Jubilee Tower car park or Rigg Lane. Locals sometimes call them the Three Chairs, but that name on the OS map is a different feature about 500 m away.",
+  "url": "https://fabulousnorth.com/clougha-pike-chambers/",
+  "id": "clougha-pike-chambers",
+  "photos": [
+   {
+    "src": "https://t0.geograph.org.uk/stamped/3546167_eb89f72b.jpg",
+    "page": "https://www.geograph.org.uk/photo/3546167",
+    "license": "CC BY-SA 2.0",
+    "artist": "Ian Taylor",
+    "title": "Clougha Pike Chambers"
+   },
+   {
+    "src": "https://t0.geograph.org.uk/stamped/7766725_3c434d9f.jpg",
+    "page": "https://www.geograph.org.uk/photo/7766725",
+    "license": "CC BY-SA 2.0",
+    "artist": "Chris Heaton",
+    "title": "The Three Chambers on Clougha"
+   }
+  ]
  },
  {
   "count": 1,

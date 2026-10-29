@@ -23,9 +23,9 @@ Temporary and ephemeral works are left out. Corrections are welcome as issues or
 
 ## Photos
 
-Photos are loaded from Wikimedia Commons, and only files with a free licence (CC BY,
-CC BY-SA, CC0, FAL or public domain) are used. Most are Geograph photos under
-CC BY-SA 2.0. Each photo is credited in the page with its author and licence and links
+Photos are loaded from Wikimedia Commons and Geograph, and only files with a free
+licence (CC BY, CC BY-SA, CC0, FAL or public domain) are used. Most are Geograph photos
+under CC BY-SA 2.0. Each photo is credited in the page with its author and licence and links
 to its Commons page. The photos are not covered by this repository's licence.
 
 ## Rebuilding the data
@@ -35,6 +35,8 @@ node scripts/sites.mjs        # site list with converted grid references
 node scripts/cat.mjs > scripts/work/cat.txt   # Commons category listing
 node scripts/photos.mjs       # Commons photos near each site
 node scripts/info.mjs         # licence and location for candidate photos
+node scripts/sweep.mjs        # full-text sweep of Commons for works not yet listed
+node scripts/geograph.mjs <ids>  # Geograph photo details
 node scripts/curate.mjs       # merge into data/sites.json
 ```
 

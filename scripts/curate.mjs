@@ -1,6 +1,7 @@
 // Merges the site list with hand-checked Commons photos and refined positions.
 // Run from the repo root: node scripts/curate.mjs
 import fs from 'fs';
+import { g } from './osgb.mjs';
 const sites = JSON.parse(fs.readFileSync('scripts/work/sites.json', 'utf8'));
 const info = Object.fromEntries(JSON.parse(fs.readFileSync('scripts/work/info.json', 'utf8')).map(x => [x.title.slice(5), x]));
 const byName = Object.fromEntries(sites.map(s => [s.name, s]));
@@ -38,7 +39,30 @@ byName['Grizedale Forest early works'].note = 'His Grizedale works were made to 
 byName['Three Sandstone Cones'].year = '';
 byName['Chalk Stones Trail'].about = 'Thirteen huge balls of chalk, carved in 2002 and set along a walk over the Downs. They are meant to weather and crumble.';
 byName['Hanging Stones'].about = 'Ten farm buildings and shelters in one small valley, each rebuilt around a work by Goldsworthy and joined by a six-mile walk.';
-byName['Lambton Earthwork'].about = 'A long, winding grassed earthwork beside the old railway line, built in 1988 on the site of former colliery workings.';
+byName['Lambton Earthwork'].about = 'A long, winding grassed earthwork beside the old railway line, built in 1988.';
+
+// Found by the full-text sweeps of Commons and Geograph.
+sites.push(
+  { name: 'Clougha Pike Chambers', group: 'Forest of Bowland', year: '1999–2001', grid: 'SD 5555 5951', ll: g('SD 5555 5951'), place: 'Old quarry below Grit Fell, Clougha, near Quernmore, Lancashire', region: 'Lancashire', access: 'open', kind: 'Three stone chambers', count: 3,
+    about: 'Three stone chambers built from leftover quarry stone, one a year from 1999. Each has an oval opening and is big enough to step inside.',
+    note: 'On the Abbeystead estate, reached on foot from the Jubilee Tower car park or Rigg Lane. Locals sometimes call them the Three Chairs, but that name on the OS map is a different feature about 500 m away.', url: 'https://fabulousnorth.com/clougha-pike-chambers/' },
+  { name: 'Leaping Arch', group: 'Nithsdale', year: '2009', ll: [55.2723, -3.8149], place: 'Marr Burn, Drumlanrig estate, near Thornhill', region: 'Dumfries & Galloway', access: 'open', kind: 'Sandstone arch', count: 1,
+    about: 'A red sandstone arch that leaps across the Marr Burn, built from estate stone for the Duke of Buccleuch.',
+    note: 'On the estate walking routes "A Turn Along the Marr Burn" and "Castle View".', url: 'https://www.drumlanrigcastle.co.uk/outdoor-activities/walking-and-hiking-2/' },
+  { name: 'Wigton Pinfold', group: 'Sheepfolds, 1996–2003', year: '2009', ll: [54.8200, -3.1596], place: 'Road junction by the petrol station, Wigton', region: 'Cumbria & borders', access: 'open', kind: 'Pinfold', count: 1, approx: true,
+    about: 'A red sandstone pinfold, described as the last work of the Sheepfolds project.' },
+  { name: 'Stone Gathering', group: 'Northumberland', year: '', ll: [55.1428, -2.0721], place: 'Stelling by Lunga Crags, near Elsdon, Northumberland', region: 'Northumberland', access: 'gone', kind: 'Stone-filled stelling', count: 1,
+    about: 'A small circular stelling, a stone shelter for sheep, filled with gathered stones.',
+    note: 'Unconfirmed. One photographer names it as Goldsworthy’s Stone Gathering; another says only that it apparently is. Not on any OS map.' },
+);
+const GZ = byName['Grizedale Forest early works'];
+Object.assign(GZ, { name: 'Taking a Wall for a Walk', group: 'Grizedale Forest', year: '1990', access: 'open', kind: 'Dry-stone wall', approx: true,
+  about: 'A dry-stone wall that winds between the trees. It is the one Grizedale work by Goldsworthy known to survive; Seven Spires and Sidewinder have gone.',
+  note: 'Some of the trees it weaves around have been felled. Hard to find, so ask at the visitor centre.' });
+const GR = byName['Gravestones'];
+Object.assign(GR, { year: 'under construction', ll: [55.3400, -3.6700],
+  about: 'A walled enclosure, about 25 metres square, filled with stones turned up by grave digging in 108 Dumfries and Galloway cemeteries.',
+  note: 'Still being built in 2026, with no opening date or access arrangements published. Position is only the Dalveen Pass.' });
 byName['Leadgate Maze'].about = 'A maze of grassed banks on the site of the old Eden Pit colliery. A viewing platform lets you see the pattern.';
 byName['Penpont Cairn (Millennium Cone)'].about = 'A tall, egg-shaped red sandstone cairn in a field near the artist’s home village, built for the millennium.';
 
@@ -60,7 +84,7 @@ const PH = {
   'Shadow Stone Fold': ['Detail of Shadow Stone Fold by Andy Goldsworthy'],
   'Lambton Earthwork': ['The Lambton Worm - geograph.org.uk - 141448'],
   'Leadgate Maze': ['The Jolly Drovers Maze, Leadgate - geograph.org.uk - 141446', 'The Leadgate Maze - geograph.org.uk - 4803084'],
-  'Grizedale Forest early works': ['"Taking a Wall for a Walk" - Grizedale Forest'],
+  'Taking a Wall for a Walk': ['"Taking a Wall for a Walk" - Grizedale Forest'],
   'Striding Arch, Cairnhead Byre': ['Striding Arch, Cairnhead - geograph.org.uk - 432703'],
   'Striding Arch, Bail Hill': ['Bail Hill Striding Arch - geograph.org.uk - 1619970'],
   'Striding Arch, Colt Hill': ['Striding Arch sculpture by Andy Goldsworthy on Colt Hill'],
@@ -74,6 +98,18 @@ const PH = {
   'Chalk Stones Trail': ['Giant chalk snowball - geograph.org.uk - 465013', "One of Andy Goldsworthy's chalk balls - geograph.org.uk - 1283156", 'Boulder on the Chalk Stones Trail'],
   'Arch at Goodwood': ['AndyGoldsworthy-ArchatGoodwood-2002'],
   'Cone': ['Gateshead Riverside Park (2) - geograph.org.uk - 4350752'],
+};
+// Geograph photos fetched by scripts/geograph.mjs, by photo id.
+const geo = JSON.parse(fs.readFileSync('scripts/work/geograph.json', 'utf8'));
+const GEO = {
+  'Clougha Pike Chambers': ['3546167', '7766725'],
+  'Leaping Arch': ['5091414'],
+  'Wigton Pinfold': ['2480823'],
+  'Stone Gathering': ['596579'],
+  'Bolton Pinfold Cone': ['4572764'],
+  'Raisbeck Pinfold Cone': ['8406056'],
+  'Deadman Gill Touchstone Fold': ['5954657'],
+  'Fellfoot Drove Folds (16)': ['2909535'],
 };
 const keys = Object.keys(info);
 const find = t => info[keys.find(k => k.startsWith(t))];
@@ -94,6 +130,12 @@ for (const s of sites) {
     if (!f) { console.log('MISSING', s.name, t); missing++; continue; }
     if (!OK.test(f.license || '')) { console.log('LICENCE?', t, f.license); continue; }
     s.photos.push({ src: f.thumb, page: f.page, license: f.license, artist: f.artist || 'Unknown', title: f.title.slice(5) });
+    n++;
+  }
+  for (const id of GEO[s.name] || []) {
+    const f = geo[id];
+    if (!f || f.license !== 'CC BY-SA 2.0' || !f.artist) { console.log('GEOGRAPH?', s.name, id); missing++; continue; }
+    s.photos.push({ src: f.src, page: f.page, license: f.license, artist: f.artist, title: f.title.replace(/\s*&amp;copy;.*$/, '') });
     n++;
   }
 }

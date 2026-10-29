@@ -1,8 +1,8 @@
 'use strict';
 
 const STORE_KEY = 'goldsworthy-visited-v1';
-const ACCESS = { open: 'Open to visit', limited: 'Ticketed or by arrangement', gone: 'Lost or unconfirmed' };
-const REGIONS = ['Edinburgh & Lothians', 'Dumfries & Galloway', 'Tyne & Wear', 'County Durham', 'Cumbria & borders', 'North Yorkshire', 'West Yorkshire', 'South of England'];
+const ACCESS = { open: 'Open to visit', limited: 'Ticketed or by arrangement', gone: 'Lost, unfinished or unconfirmed' };
+const REGIONS = ['Edinburgh & Lothians', 'Dumfries & Galloway', 'Northumberland', 'Tyne & Wear', 'County Durham', 'Cumbria & borders', 'Lancashire', 'North Yorkshire', 'West Yorkshire', 'South of England'];
 
 const $ = id => document.getElementById(id);
 const show = { open: true, limited: true, gone: true };
@@ -122,7 +122,7 @@ function showPhoto() {
   const a = document.createElement('a');
   a.href = p.page; a.target = '_blank'; a.rel = 'noopener';
   a.textContent = `${p.artist}, ${p.license}`;
-  c.append(a, ', via Wikimedia Commons');
+  c.append(a, p.page.includes('geograph.org.uk') ? ', via Geograph' : ', via Wikimedia Commons');
 }
 
 function renderVisitButton() {

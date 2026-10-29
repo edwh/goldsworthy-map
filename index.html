@@ -32,11 +32,11 @@
   </main>
 </div>
 
-<dialog id="modal" aria-labelledby="m-name">
+<dialog id="modal" aria-labelledby="m-name" tabindex="-1">
   <div class="m-photo" id="m-photo">
     <img id="m-img" alt="">
-    <button class="nav prev" id="m-prev" aria-label="Previous photo">&#8249;</button>
-    <button class="nav next" id="m-next" aria-label="Next photo">&#8250;</button>
+    <button class="nav prev" id="m-prev" aria-label="Previous photo"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M10 3L5 8l5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <button class="nav next" id="m-next" aria-label="Next photo"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
     <div class="m-count" id="m-count"></div>
   </div>
   <p class="credit" id="m-credit"></p>
@@ -54,7 +54,7 @@
       <a class="btn" id="m-more" target="_blank" rel="noopener">More info</a>
     </div>
   </div>
-  <button class="close" id="m-close" aria-label="Close" autofocus>&times;</button>
+  <button class="close" id="m-close" aria-label="Close"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
 </dialog>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>

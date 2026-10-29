@@ -160,7 +160,7 @@ function openSite(s) {
   if (s.url) $('m-more').href = s.url;
   renderVisitButton();
   showPhoto();
-  if (!modal.open) modal.showModal();
+  if (!modal.open) { modal.showModal(); modal.focus(); }
   modal.scrollTop = 0;
   if (location.hash !== '#' + s.id) history.replaceState(null, '', '#' + s.id);
 }
